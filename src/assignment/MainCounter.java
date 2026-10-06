@@ -6,24 +6,30 @@ public class MainCounter {
 
     public static void main(String[] args) {
 
-        //Skriv ett program som läser in text ifrån
-        //kommandoraden rad för rad tills användaren
-        //skriver ordet stop.
-
-        Scanner scan = new Scanner(System.in);
-        String[] input = new String[1];
         System.out.println("Skriv 'stop' för att avsluta");
 
-        for (int i=0; i < input.length; i++){
-            input[i] = scan.nextLine();
-            /*if ("stop"){
-                System.out.println("Stopped");
-                break;
-            } else {
-                System.out.println("not stopped");
-                //input[i] = scan.nextLine();
-            }*/
+        //Läser in text ifrån användaren -> Scanner -> Text
+        LogicCounter counter = new LogicCounter();
+        Scanner scan = new Scanner(System.in);
+
+        String text = scan.nextLine();
+
+        //upprepa tills text = "stop"
+        while(!text.equals("stop")) {
+            counter.count(text);
+            text = scan.nextLine();
         }
+        //Hämta antal tecken och rader
+        int letters = counter.getLetters();
+        int rows = counter.getRows();
+        //Skriv ut antal tecken och rader
+        System.out.println(letters);
+        System.out.println(rows);
+
+
 
     }
+
+    //Kontrollerar om man har skrivit stop
+
 }
