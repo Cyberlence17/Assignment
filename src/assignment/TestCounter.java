@@ -129,4 +129,36 @@ public class TestCounter {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testIsRunning() {
+        //Arrange
+        LogicCounter counter = new LogicCounter();
+
+
+        //Act
+        counter.count("text hejsan");;
+        Boolean actual = counter.isRunning();
+        Boolean expected = true;
+
+        //Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testIsStopped() {
+        //Arrange
+        LogicCounter counter = new LogicCounter();
+
+
+        //Act
+        counter.count("text hejsan");
+        counter.count("stop");
+        Boolean actual = counter.isRunning();
+        Boolean expected = false;
+
+        //Assert
+        assertEquals(expected, actual);
+    }
+
+
 }

@@ -12,17 +12,20 @@ public class MainCounter {
         LogicCounter counter = new LogicCounter();
         Scanner scan = new Scanner(System.in);
 
-        String text = scan.nextLine();
+        //String text = scan.nextLine();
 
         //upprepa tills text = "stop"
-        while(!text.equals("stop")) {
-            counter.count(text);
-            text = scan.nextLine();
+        while(counter.isRunning()) {
+            counter.count(scan.nextLine());
+            //String text = scan.nextLine();
+            //counter.count(text);
         }
-        //Hämta antal tecken och rader
+        //Hämtar antal tecken och rader
         int letters = counter.getLetters();
         int rows = counter.getRows();
-        //Skriv ut antal tecken och rader
+        //lägg till getwords & longestword
+
+        //Skriver ut antal tecken och rader
         System.out.println(letters);
         System.out.println(rows);
 

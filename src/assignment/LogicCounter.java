@@ -9,10 +9,20 @@ public class LogicCounter {
     //attribut för antal ord
     private int words;
     //attribut för längsta ord
-    private String longestWord = "";
+    private String longestWord;
 
+    //startvärden
+    public LogicCounter(){
+        this.rows = 0;
+        this.letters = 0;
+        this.longestWord = "";
+    }
 
     public void count(String text) {
+        //kontrollera om vi skrivit stop
+
+
+
         //lägg till 1
         rows++;
 
@@ -55,11 +65,14 @@ public class LogicCounter {
         return longestWord;
     }
 
+    public Boolean isRunning() {
+        return true;
+    }
+
     //lägg till getWords, getLongestWord to Main
 
 
 
     //Har vi skrivit stop? return Boolean
-
 
 }
