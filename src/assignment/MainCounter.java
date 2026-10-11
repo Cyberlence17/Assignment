@@ -23,11 +23,15 @@ public class MainCounter {
         //Hämtar antal tecken och rader
         int letters = counter.getLetters();
         int rows = counter.getRows();
+        String longestWord = counter.getLongestWord();
+        int words = counter.getWords();
         //lägg till getwords & longestword
 
         //Skriver ut antal tecken och rader
         System.out.println(letters);
         System.out.println(rows);
+        System.out.println(longestWord);
+        System.out.println(words);
 
 
 
