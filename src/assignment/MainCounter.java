@@ -30,13 +30,12 @@ public class MainCounter {
         //Skriver ut antal tecken och rader
         System.out.println(letters);
         System.out.println(rows);
-        System.out.println(longestWord);
         System.out.println(words);
-
+        System.out.println(longestWord);
 
 
     }
 
-    //Kontrollerar om man har skrivit stop
+
 
 }
