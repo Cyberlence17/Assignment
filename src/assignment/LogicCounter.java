@@ -17,6 +17,7 @@ public class LogicCounter {
     public LogicCounter(){
         this.rows = 0;
         this.letters = 0;
+        this.words = 0;
         this.longestWord = "";
         this.running = true;
     }
