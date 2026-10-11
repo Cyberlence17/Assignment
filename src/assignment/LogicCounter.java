@@ -77,10 +77,9 @@ public class LogicCounter {
         return running;
     }
 
-    //lägg till getWords, getLongestWord to Main
 
 
 
-    //Har vi skrivit stop? return Boolean
+
 
 }
