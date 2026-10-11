@@ -25,7 +25,7 @@ public class MainCounter {
         int rows = counter.getRows();
         String longestWord = counter.getLongestWord();
         int words = counter.getWords();
-        //lägg till getwords & longestword
+
 
         //Skriver ut antal tecken och rader
         System.out.println(letters);

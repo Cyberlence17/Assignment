@@ -24,28 +24,25 @@ public class LogicCounter {
 
     public void count(String text) {
         //kontrollera om vi skrivit stop
-
-
-
-        //lägg till 1
-        rows++;
-
-        //lägg till antal tecken
-        letters += text.length();
-
-        //lägg till antal ord
-        String[] word = text.split(" ");
-        words += word.length;
-
-        //lägg till längsta ordet
-        for (int i = 0; i < word.length; i++) {
-            if(word[i].length() > longestWord.length()){
-                longestWord = word[i];
-            }
-        }
-
         if (text.equals("stop")){
             running = false;
+        }   else  {
+            //lägg till 1
+            rows++;
+
+            //lägg till antal tecken
+            letters += text.length();
+
+            //lägg till antal ord
+            String[] word = text.split(" ");
+            words += word.length;
+
+            //lägg till längsta ordet
+            for (int i = 0; i < word.length; i++) {
+                if (word[i].length() > longestWord.length()) {
+                    longestWord = word[i];
+                }
+            }
         }
     }
 
@@ -73,7 +70,8 @@ public class LogicCounter {
         return longestWord;
     }
 
-    public Boolean isRunning() {
+    //Kollar om koden körs --
+    public boolean isRunning() {
         //return Boolean
         return running;
     }
